@@ -10,7 +10,7 @@ from evaluate_baselines import run_game
 agent = DQNAgent("dqn.pt")
 
 scores = []
-for seed in range(20):
+for seed in range(200):
     result = run_game(agent, seed)  
     scores.append(result["score"])
 

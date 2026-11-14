@@ -14,7 +14,7 @@ from dqn import QNetwork, ReplayBuffer, select_action, optimize
 
 
 # Hyperparameters
-N_EPISODES = 50
+N_EPISODES = 2000
 BATCH_SIZE = 64
 GAMMA = 0.99
 LR = 0.0005 # learning rate
@@ -22,7 +22,7 @@ BUFFER_SIZE = 50000
 TRAIN_START = 1000 # begin training after this many transitions are stored in the buffer
 EPS_START = 1.0
 EPS_END = 0.05
-EPS_DECAY_EPISODES = 40 # number of episodes over which epsilon decays from EPS_START to EPS_END
+EPS_DECAY_EPISODES = 1000 # number of episodes over which epsilon decays from EPS_START to EPS_END
 TARGET_UPDATE = 5 # number of episodes between target network updates
 
 
@@ -71,6 +71,7 @@ for episode in range(N_EPISODES):
 
     # Log the results of this episode
     writer.writerow([episode, game.score, game.max_tile(), game.n_moves, round(epsilon, 3), round(avg_loss, 4)])
+    log_file.flush()
 
     # Print progress every 10 episodes
     if episode % 10 == 0:
