@@ -1,0 +1,4 @@
+agent,games,mean_score,median_score,mean_moves,pct_reached_256,pct_reached_512,pct_reached_1024,pct_reached_2048
+DQNAgent,200,2068.68,2008.0,186.69,43.0,3.0,0.0,0.0
+RandomAgent,200,1085.9,1038.0,117.485,8.5,0.0,0.0,0.0
+RuleBasedAgent,200,3431.48,3174.0,277.73,70.5,20.5,0.5,0.0
