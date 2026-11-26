@@ -1,4 +1,0 @@
-agent,mean_score,median_score,mean_moves,reach_256_%,reach_512_%,reach_1024_%,reach_2048_%
-Random,1085.9,1038.0,117.5,8.5,0.0,0.0,0.0
-DQN,2068.7,2008.0,186.7,43.0,3.0,0.0,0.0
-Rule-based,3431.5,3174.0,277.7,70.5,20.5,0.5,0.0
