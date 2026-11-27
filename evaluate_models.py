@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 from evaluate_dqn import evaluate_dqn
 
-def evaluate_models(n_games = 200):
+def evaluate_models(n_games = 1000):
     model_dir = Path("models")
     output_dir = Path("results")
     output_dir.mkdir(exist_ok=True)

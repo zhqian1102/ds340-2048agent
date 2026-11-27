@@ -71,6 +71,11 @@ def compute_reward(reward, info, done, prev_max, version):
     elif version == "R3":
         if info["max_tile"] > prev_max:
             r += float(np.log2(info["max_tile"]))
+    # R4: R1 + R3
+    elif version == "R4":
+        r += 0.1 * info["empty_cells"]
+        if info["max_tile"] > prev_max:
+            r += float(np.log2(info["max_tile"]))
     
     return r
 
